@@ -10,9 +10,12 @@ class RingBuffer:
     def append(self, item):
         #If self.storage.length is at capacity:
         if self.storage.length == self.capacity:
+            #Keep track of where the most current node is, which will be the tail
+            #If its empty, you may set its value  == to item
             if self.current is None:
                 self.current = self.storage.tail
             self.current.value = item
+            #If it has any previous nodes, set the previous one up as current
             if self.current.prev:
                 self.current = self.current.prev
             else:
