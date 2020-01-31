@@ -22,7 +22,7 @@ class RingBuffer:
             self.storage.add_to_head(item)
             self.current = self.storage.head
         #If self.storage.length is at capacity, insert item after current,  adjust storage length, set new item as current. 
-        if self.storage.length == self.capacity:
+        else:
             self.current.insert_after(item)
             self.storage.length += 1
             self.current = self.current.next
