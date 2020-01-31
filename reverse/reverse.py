@@ -45,6 +45,7 @@ class LinkedList:
   def reverse_list(self):
     
     # # TO BE COMPLETED
+#Single Iteration (needs debugging)
     # if (self.head == None or self.head.next_node == None):
     #   return self.head
 
@@ -63,7 +64,7 @@ class LinkedList:
     # return reversed_list
 
 
-#Multiple Iterations
+#Multiple Iterations (Working)
     previous = None
     current_node = self.head
     while current_node != None:
