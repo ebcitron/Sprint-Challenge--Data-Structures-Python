@@ -46,30 +46,30 @@ class LinkedList:
     
     # # TO BE COMPLETED
 #Single Iteration (needs debugging)
-    # if (self.head == None or self.head.next_node == None):
-    #   return self.head
+    if (self.head == None or self.head.next_node == None):
+      return self.head
 
-    # the_rest = self.head.next_node
+    the_rest = self.head.next_node
     
-    # reversed_list = self.head
-    # reversed_list.next_node = None
+    reversed_list = self.head
+    reversed_list.next_node = None
 
-    # while (the_rest != None):
-    #   x = the_rest
-    #   the_rest = the_rest.next_node
+    while (the_rest != None):
+      x = the_rest
+      the_rest = the_rest.next_node
 
-    #   x.next_node = reversed_list
-    #   reversed_list = x
+      x.next_node = reversed_list
+      reversed_list = x
 
-    # return reversed_list
+    return reversed_list
 
 
-#Multiple Iterations (Working)
-    previous = None
-    current_node = self.head
-    while current_node != None:
-      next_node = current_node.next_node
-      current_node.next_node = previous
-      previous = current_node
-      current_node = next_node
-    self.head = previous
+# #Multiple Iterations (Working)
+#     previous = None
+#     current_node = self.head
+#     while current_node != None:
+#       next_node = current_node.next_node
+#       current_node.next_node = previous
+#       previous = current_node
+#       current_node = next_node
+#     self.head = previous
